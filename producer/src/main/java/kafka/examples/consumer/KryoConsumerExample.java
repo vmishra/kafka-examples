@@ -50,6 +50,7 @@ public class KryoConsumerExample {
             consumerConfig.put("group.id", "my-group");
             consumerConfig.put("bootstrap.servers", brokerList);
             consumerConfig.put("auto.offset.reset", "earliest");
+            //TODO add kafka.poll.ms to consumerConfig
             consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "kafka.examples.kryo.serde.KryoDeserializer");
             consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "kafka.examples.kryo.serde.KryoDeserializer");
 
